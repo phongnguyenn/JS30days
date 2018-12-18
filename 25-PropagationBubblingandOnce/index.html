@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Understanding JS's Capture</title>
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="body">
+		<div class="one">
+		    <div class="two">
+		    	<div class="three"></div>
+		    </div>
+		 </div>
+		<button>Button</button>
+	<script>
+		const divs = document.querySelectorAll('div');
+  		const button = document.querySelector('button');
+
+  		function logText(e) {
+   			console.log(this.classList.value);
+   			e.stopPropagation();
+   			// console.log(this);
+		}
+
+		// document.body.addEventListener('click', logText);
+
+		divs.forEach(div => div.addEventListener('click', logText, {
+		capture: false,
+		once: true
+  		}));
+  		button.addEventListener('click', () => {
+    		console.log('Click rồi');
+  		}, {
+    		once: true
+  		});
+	</script>
+	</body>
+</html>		

@@ -1,0 +1,34 @@
+html {
+	box-sizing: border-box;
+	background: #ffc600;
+}
+body {
+	text-align: center;
+}
+input {
+	font-size: 18px;
+	width: 200px;
+	height: 30px;
+}
+form ul {
+	margin: 10px auto;
+	text-align: center;
+}
+.suggestions li {
+	margin: 0 auto;
+	font-size: 25px;
+ 	color: #000;
+ 	list-style: none;
+ 	border: 1px solid #eee;
+ 	background-color: #fff;
+ 	display: flex;
+ 	justify-content: space-between;
+ 	width: 400px;
+ 	padding: 7px;
+ }
+ .population {
+
+ }
+ .hl {
+ 	background: #ffc600;
+ }

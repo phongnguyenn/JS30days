@@ -1,0 +1,10 @@
+html {
+	box-sizing: border-box;
+	background: #6B0F90;
+}
+.progress__filled{
+	width: 50%;
+	background: #ffc600;
+	flex: 0;
+	flex-basis: 50%;
+}

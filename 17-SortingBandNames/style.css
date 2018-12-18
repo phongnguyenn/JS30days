@@ -1,0 +1,26 @@
+html {
+	box-sizing: border-box;
+	background: #ffc600;
+	font-family: 'helvetica neue';
+	font-size: 20px;
+}
+body {
+	margin: 0;
+	text-align: center;
+	position: relative;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+#bands {
+	background: #fff;
+	max-width: 300px;
+	text-align: left;
+	margin: 20px auto;
+}
+#bands li {
+	list-style: square;
+	border-bottom: 1px solid #eee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

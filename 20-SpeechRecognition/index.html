@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Speech Recognition</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		
+	<script>
+		window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+		const recognition = new SpeechRecognition();
+		recognition.interimResults = true;
+
+		let p = document.creatElement('p');
+		const words = document.querySelector('.words');
+		words.appendChild(p);
+
+		recognition.addEvetnListener('results', e => {
+			console.log(e.results);
+		});
+
+		recognition.start();
+		
+	</script>
+	</body>
+</html>		

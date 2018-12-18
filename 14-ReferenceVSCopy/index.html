@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Reference VS Copy</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		
+
+	<script>
+		//number, string, boolean:
+		let age = 100;
+		let age2 = age;
+		console.log(age, age2);
+		age = 200;
+		console.log(age, age2);
+		//string
+		let name = 'Teo';
+		let name2 = name;
+		console.log(name, name2);
+		name = 'Van';
+		console.log(name, name2);
+		//array
+		const players = ['VanA', 'VanB', 'VanC', 'VanD'];
+		const team = players;
+		console.log(players, team);
+		team[3] = 'Nam';
+		const team2 = players.splice();
+		const team3 = [].concat(players);
+		const team4 = [...players];
+		team4[3] = 'haaaaaa';
+		console.log(team4);
+		const team5 =Array.from(players);
+		team5[3] = 'hiiii';
+		console.log(team5);
+		//Object
+		const person = {
+			name: 'Van A',
+			age: 30
+		};
+		// const caption = person;
+		// caption.number = 90;
+
+		const cap2 = Object.assign({}, person, {number: 99, age: 12});
+		console.log(cap2);
+
+		const cap3 = {...person};
+
+		const VanH = {
+			name: 'Van',
+			age: 35,
+			social: {
+				zalo: 09898908,
+				facebook: 'VanH.fb'
+			}
+		}
+		console.clear();
+		console.log(VanH);
+
+		const dev = Object.assign({}, VanH);
+		const dev2 = JSON.parse(JSON.stringify(VanH));
+		console.log(dev2);
+		dev2.social.zalo = '@coolman';
+		console.log(VanH.social);
+		console.log(JSON.stringify(VanH));
+		console.log(JSON.parse(JSON.stringify(VanH)));
+	</script>
+	</body>
+</html>		

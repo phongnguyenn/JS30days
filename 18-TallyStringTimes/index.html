@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Tally String Times</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<ul class="videos">
+			<li data-time="2:32">
+				Video 1
+			</li>
+			<li data-time="5:32">
+				Video 2
+			</li>
+			<li data-time="1:42">
+				Video 3
+			</li>
+			<li data-time="4:23">
+				Video 4
+			</li>
+			<li data-time="3:43">
+				Video 5
+			</li>
+			<li data-time="4:31">
+				Video 6
+			</li>
+			<li data-time="3:53">
+				Video 7
+			</li>
+			<li data-time="6:43">
+				Video 8
+			</li>
+			<li data-time="3:23">
+				Video 9
+			</li>
+			<li data-time="1:43">
+				Video 10
+			</li>
+			<li data-time="3:53">
+				Video 11
+			</li>
+			<li data-time="6:43">
+				Video 12
+			</li>
+			<li data-time="2:43">
+				Video 13
+			</li>
+			<li data-time="4:43">
+				Video 14
+			</li>
+			<li data-time="2:43">
+				Video 15
+			</li>
+			<li data-time="3:43">
+				Video 16
+			</li>
+			<li data-time="6:43">
+				Video 17
+			</li>
+			<li data-time="1:42">
+				Video 18
+			</li>
+			<li data-time="5:42">
+				Video 19 
+			</li>
+			<li data-time="4:59">
+				Video 20
+			</li>
+			<li data-time="3:01">
+				Video 21
+			</li>
+			<li data-time="1:11">
+				Video 22
+			</li>
+			<li data-time="2:22">
+				Video 23
+			</li>
+			<li data-time="3:33">
+				Video 24
+			</li>
+			<li data-time="4:44">
+				Video 25
+			</li>
+			<li data-time="5:55">
+				Video 26
+			</li>
+			<li data-time="4:15">
+				Video 27
+			</li>
+			<li data-time="5:12">
+				Video 28
+			</li>
+			<li data-time="1:19">
+				Video 29
+			</li>
+			<li data-time="6:39">
+				Video 30
+			</li>
+			<li data-time="4:39">
+				Video 31
+			</li>
+		</ul>
+	<script>
+		const timeNodes = [...document.querySelectorAll('[data-time]')];
+		// console.log(timeNodes);
+
+		const seconds = timeNodes
+			.map(node => node.dataset.time)
+			.map(timeCode => {
+				const [mins, secs] = timeCode.split(':').map(parseFloat);
+				return (mins*60)+secs;
+			// console.log(mins, secs);
+			})
+			.reduce((total, vidSeconds) => total + vidSeconds);
+
+			let secondsLeft = seconds;
+			const hours = Math.floor(secondsLeft / 3600);
+			secondsLeft = secondsLeft % 3600;
+
+			const mins = Math.floor(secondsLeft / 60);
+			secondsLeft = secondsLeft % 60;
+
+			console.log(hours, mins, secondsLeft);
+	</script>
+	</body>
+</html>		

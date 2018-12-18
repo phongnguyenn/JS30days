@@ -1,0 +1,29 @@
+html {
+	box-sizing: border-box;
+	background: #ffc600;
+	font-family: 'helvetica neue';
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+  align-items: center;
+}
+
+div {
+  width: 100%;
+  padding: 100px;
+}
+.one {
+  background: thistle;
+}
+.two {
+  background: mistyrose;
+}
+.three {
+  background: coral;
+}
+button {
+  background-color: #fff;
+  color: coral;
+}

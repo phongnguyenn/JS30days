@@ -1,0 +1,39 @@
+html {
+	box-sizing: border-box;
+	background: #ffc600;
+	font-family: 'helvetica neue';
+	font-size: 20px;
+}
+body {
+	margin: 0;
+	/*text-align: center;*/
+	position: relative;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+li {
+	text-align: left;
+	margin-left: 20px;
+}
+.take-photo {
+	color: #fff;
+	background: purple;
+	border-radius: 20px;
+	font-size: 14px;
+	padding: 5px 10px;
+}
+video {
+	margin: 10px auto;
+}
+.player {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+  	width:200px;
+
+}
+.photo {
+  float:left;
+}

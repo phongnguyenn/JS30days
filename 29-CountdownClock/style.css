@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+	background: #ffc600;
+	font-family: 'helvetica neue';
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.display__end-time,
+.display__time-left {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+}
+
+.display__time-left {
+  font-size: 200px;
+}
+
+.timer,
+.timer__controls,
+.timer__controls form {
+  display: flex;
+}
+
+.timer__button {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px;
+  font-size: 30px;
+  background: #e89645;
+  cursor: pointer;
+}
+
+.timer__button:hover {
+  background: #f4ee41;
+}
+
+.display {
+  display: block;
+  margin: 10px auto;
+}
+

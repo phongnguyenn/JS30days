@@ -1,0 +1,31 @@
+html {
+	box-sizing: border-box;
+	background: #6B0F90;
+}
+video {
+	width: 100%;
+	height: auto;
+}
+.player:hover . .progress {
+	height: 15px;
+}
+.player__controls {
+	width: 100%;
+}
+.progress {
+	background: #000;
+	position: relative;
+	display: flex;
+	flex-basis: 100%;
+	flex: 10;
+	height: 5px;
+	transition: height 0.3s;
+	background: rgba(0,0,0,0.5);
+	cursor: ew-resize;
+}
+.progress__filled{
+	width: 50%;
+	background: #ffc600;
+	flex: 0;
+	flex-basis: 50%;
+}

@@ -1,0 +1,27 @@
+html {
+	box-sizing: border-box;
+	background: #ffc600;
+	font-family: 'helvetica neue';
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+video {
+  display: inline-block;
+}
+.speed {
+  display: inline-block;
+  background: #fff;
+  border-radius: 50px;
+  height: 200px;
+  min-width: 50px;
+  vertical-align: top;
+  margin-left: 20px;
+  margin-top: 20px;
+
+}
+.speed-bar {
+  background: #ef712d;
+  color:white;
+  text-align: center;
+}

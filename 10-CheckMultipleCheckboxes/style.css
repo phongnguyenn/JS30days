@@ -1,0 +1,33 @@
+html {
+	box-sizing: border-box;
+	background: #ffc600;
+}
+body {
+	text-align: center;
+}
+.inbox {
+	background: #fff;
+	width: 300px;
+	margin: 10px auto;
+	box-shadow: 5px 5px 8px rgba(68, 68, 68, 0.6);
+	text-align: left;
+}
+.item {
+    display: flex;
+    align-items: center;
+	border: 1px solid #eee;
+}
+.item input {
+	text-align: center;
+	width: 20px;
+}
+.item input:checked ~ p {
+	text-decoration: line-through;
+}
+.item p {
+	display: inline-block;
+	border-left: 1px solid #eee;
+	padding: 15px;
+	margin: 0;
+	color: #494747;
+}

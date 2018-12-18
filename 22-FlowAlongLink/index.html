@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Flow A Long link</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<nav>
+			<ul class="menu">
+				<li><a href="">Home</a></li>
+				<li><a href="">Order Status</a></li>
+				<li><a href="">Tweets</a></li>
+				<li><a href="">Read Our History</a></li>
+				<li><a href="">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div class="wrapper">
+			<p>Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipisicing elit. Perferendis nihil ea <a href="">labore</a> fugit, adipisci delectus illum incidunt. Consectetur porro, dolore ipsum enim, perspiciatis voluptate facere, sunt magni incidunt, quos tempore.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur <a href="">adipisicing</a> elit. Voluptatibus ullam quis eius itaque dolorum ea, eos iste eligendi quas, accusamus, beatae. Dolores ut laboriosam, unde <a href="">molestiae</a> eaque exercitationem qui. Ut.</p>
+			<p>Lorem ipsum dolor sit <a href="">ametada</a>, consectetur adipisicing elit. Iusto provident voluptates itaque odio soluta, culpa, voluptatum vel animi vitae nobis quibusdam voluptatem debitis, <a href="">quaerat</a> quos quis ratione commodi explicabo distinctio.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur <a href="">adipisicing</a> elit. Voluptatibus ullam quis eius itaque dolorum ea, eos iste eligendi quas, accusamus, beatae. Dolores ut laboriosam, unde <a href="">molestiae</a> eaque exercitationem qui. Ut.</p>
+		</div>
+	<script>
+		const triggers = document.querySelectorAll('a');
+		const highlight = document.createElement('span');
+		highlight.classList.add('highlight');
+		document.body.append(highlight);
+
+		function highlightLink() {
+			const linkCoords = this.getBoundingClientRect();
+			console.log(this);
+			console.log(linkCoords);
+			const coords = {
+				width: linkCoords.width,
+				height: linkCoords.height,
+				top: linkCoords.top + window.scrollY,
+				left: linkCoords.left + window.scrollX
+			}
+			highlight.style.width = `${coords.width}px`;
+			highlight.style.height = `${coords.height}px`;
+			highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+		}
+
+		triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+	</script>
+	</body>
+</html>		
